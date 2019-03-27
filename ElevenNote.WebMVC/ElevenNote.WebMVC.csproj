@@ -180,7 +180,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -257,6 +256,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElevenNote.Data\ElevenNote.Data.csproj">
+      <Project>{7c5c892a-19e5-4d30-9c6a-abd5687763d6}</Project>
+      <Name>ElevenNote.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElevenNote.Models\ElevenNote.Models.csproj">
+      <Project>{de6e9e5a-c014-4683-90ac-b7bebc24c4e1}</Project>
+      <Name>ElevenNote.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElevenNote.Services\ElevenNote.Services.csproj">
+      <Project>{55d4ef7c-dc53-4ab7-9e7e-5cd02a4f766f}</Project>
+      <Name>ElevenNote.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
