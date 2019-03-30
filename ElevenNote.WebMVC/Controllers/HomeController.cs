@@ -15,7 +15,7 @@ namespace ElevenNote.WebMVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Gutr";
 
             return View();
         }
@@ -23,6 +23,13 @@ namespace ElevenNote.WebMVC.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Profile()
+        {
+            ViewBag.Message = "Your Profile page.";
 
             return View();
         }
