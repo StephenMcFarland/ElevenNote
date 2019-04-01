@@ -35,6 +35,30 @@ namespace ElevenNote.Services
             }
         }
 
+        public IEnumerable<NoteListItem> GetAllPosts()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Notes
+                        .Where(e => e.NoteId > 0)
+                        .Select(
+                            e =>
+                                new NoteListItem
+                                {
+                                    NoteId = e.NoteId,
+                                    //_userid = e.UserId,
+                                    Title = e.Title,
+                                    CreatedUtc = e.CreatedUtc
+                                }
+                        );
+                
+                return query.ToArray();
+            }
+        }
+
+        //ORIGINAL GETNOTES()
         public IEnumerable<NoteListItem> GetNotes()
         {
             using (var ctx = new ApplicationDbContext())
@@ -52,7 +76,7 @@ namespace ElevenNote.Services
                                     CreatedUtc = e.CreatedUtc
                                 }
                         );
-                
+
                 return query.ToArray();
             }
         }

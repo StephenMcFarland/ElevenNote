@@ -20,8 +20,21 @@ namespace ElevenNote.WebMVC.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new NoteService(userId);
             var model = service.GetNotes();
+            //var model = service.GetAllPosts();
+            return View(model);
+        }
+
+        // GET: All Posts
+        [Authorize]
+        public ActionResult AllPosts()
+        {
+            //var model = new NoteListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new NoteService(userId);
+            var model = service.GetAllPosts();
 
             return View(model);
+            //return View();
         }
 
         //GET
