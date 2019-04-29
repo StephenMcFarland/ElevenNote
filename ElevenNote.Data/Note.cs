@@ -25,5 +25,6 @@ namespace ElevenNote.Data
         public DateTimeOffset CreatedUtc { get; set; }
 
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public bool RealSlimShady { get; set; }
     }
 }
