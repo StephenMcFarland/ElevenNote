@@ -1,6 +1,9 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url(https://fsmedia.imgix.net/e9/60/40/86/2de8/4d92/8e94/a70634fec701/rick-and-morty-gave-a-proverbial-middle-finger-to-fans-last-night-but-maybe-we-deserved-it.png?rect=0%2C0%2C1920%2C959&auto=format%2Ccompress&dpr=2&w=650);
+    background-position: center;
+    background-size: cover;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -14,4 +17,8 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+.navbar{
+    background-color:orangered;
+    color: black;
 }
